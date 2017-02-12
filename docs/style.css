@@ -445,6 +445,10 @@ a:hover {
 	text-align: left;
 }
 
+.resource:link {
+	color: #0078d7;
+}
+
 .resource:hover {
 	background-color: #7bb63c;
 	border-color: #7bb63c;
