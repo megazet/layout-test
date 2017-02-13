@@ -4,6 +4,7 @@ html, body {
 	font-family: 'Segoe UI Regular', sans-serif;
 	font-size: 18px;
 	margin: 0;
+	min-width: 480px;
 	padding: 0;
 	width: 100%;
 }
@@ -119,12 +120,14 @@ a:hover {
 }
 
 .figure {
+	min-height: 546px;
 	position: relative;
+	left: 32px;
 }
 
 .figure-cloud {
 	height: 243px;
-	left: 67px;
+	left: 35px;
 	position: absolute;
 	top: 141px;
 	width: 363px;
@@ -133,7 +136,7 @@ a:hover {
 
 .figure-icons {
 	height: 320px;
-	left: 60px;
+	left: 28px;
 	position: absolute;
 	top: 0px;
 	width: 260px;
@@ -185,7 +188,7 @@ a:hover {
 
 .figure-manandmachine {
 	height: 354px;
-	left: 32px;
+	left: 0px;
 	position: absolute;
 	top: 161px;
 	width: 481px;
@@ -194,7 +197,7 @@ a:hover {
 
 .figure-diagramm {
 	height: 60px;
-	left: 79px;
+	left: 45px;
 	position: absolute;
 	top: 328px;
 	width: 64px;
@@ -307,23 +310,19 @@ a:hover {
 }
 
 .blocks {
-	margin-top: 42px;
-	margin-bottom: 102px;
-}
-
-.blocks-row {
-	margin-bottom: 58px;
-	margin-left: -1px;
+	margin: 42px 0 102px -1px;
 }
 
 .solution {
 	box-sizing: border-box;
 	display: block;
 	float: left;
+	margin-bottom: 58px;
 	margin-left: 47px;
+	min-height: 212px;
 }
 
-.solution:first-child {
+.solution:nth-child(4n+1) {
 	margin-left: 0;
 }
 
@@ -372,6 +371,9 @@ a:hover {
 	line-height: 1.1;
 	margin-top: 17px;
 	width: 205px;
+	-webkit-hyphens: auto;
+	    -ms-hyphens: auto;
+	        hyphens: auto;
 }
 
 .solution:hover > .solution-name {
@@ -381,30 +383,28 @@ a:hover {
 .shop {
 	background-color: #0078d7;
 	color: #FFFFFF;
-	height: 167px;
+	min-height: 167px;
 	line-height: 60px;
 }
 
 .map {
+	display: block;
 	float: left;
 	height: 99px;
-	margin: 29px 27px 0;
+	margin: 29px 43px 29px 27px;
 	width: 165px;
 }
 
 .shop-text {
-
-	float: left;
+	margin: 0;
 	font: 18px 'Segoe UI Semilight';
 	line-height: 1.33333;
-	margin: 57px 0 0 16px;
-	width: auto;
+	padding: 59px 0px;
 }
 
 .shop-text > a {
 	font: 18px 'Segoe UI Semibold';
 }
-
 
 .resources {
 	padding-top: 1px;
@@ -477,11 +477,10 @@ a:hover {
 .stepper-connector {
 	border: 0;
 	border-bottom: 1px solid #00abec;
-	left: 63px;
-	margin: 0;
-	position: absolute;
+	margin: 0 auto;
+	position: relative;
 	top: 41px;
-	width: 914px;
+	width: 80%;
 	z-index: 1;
 }
 
@@ -519,4 +518,69 @@ a:hover {
 	content: "";
 	display: table;
 	clear: both;
+}
+
+@media screen and (max-width: 960px) {
+	.content {
+		box-sizing: border-box;
+		padding: 0 10px ;
+		width: 100%;
+	}
+	.about-column {
+		float: none;
+		width: 100%;
+	}
+	.about-content {
+		padding: 0;
+	}
+	.figure {
+		margin: 0 auto;
+		left: 0;
+		width: 481px;
+	}
+	.blocks {
+		margin: 42px auto 102px;
+		width: 675px;
+	}
+	.solution, .solution:nth-child(4n+1) {
+		margin: 0 10px 58px 10px;
+	}
+	.resources-row {
+	      -webkit-box-orient: vertical;
+	      -webkit-box-direction: normal;
+	          -ms-flex-direction: column;
+	              flex-direction: column;
+	}
+	.resource {
+		margin-right: 0;
+	}
+	.resource:last-child {
+		-webkit-box-flex: 0;
+		    -ms-flex: none;
+		        flex: none;
+	}
+	.resource > br {
+		display: none;
+	}
+	.stepper {
+		left: 0;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.about-column {
+		overflow-x: hidden;
+	}
+	.blocks {
+		width: 450px;
+	}
+	.map {
+		display: none;
+	}
+	.step__description {
+		-webkit-hyphens: auto;
+		    -ms-hyphens: auto;
+		        hyphens: auto;
+	}
 }

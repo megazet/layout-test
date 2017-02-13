@@ -1,5 +1,5 @@
 # Azure Marketplace
 
-Тестовое задание для JetStyle
+Тестовое задание от JetStyle
 
 https://megazet.github.io/layout-test/
