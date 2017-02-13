@@ -578,9 +578,36 @@ a:hover {
 	.map {
 		display: none;
 	}
+	.stepper {
+		margin-top: 0px;
+	}
+	.stepper-connector {
+		left: 52px;
+		top: 15px;
+		-webkit-transform-origin: 0% 0;
+		        transform-origin: 0% 0;
+		-webkit-transform: rotate(90deg);
+		        transform: rotate(90deg);
+		position: absolute;
+	}
+	.step {
+		float: none;
+		width: 100%;
+
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.step__round {
+		float: left;
+		margin: 10px;
+	}
 	.step__description {
-		-webkit-hyphens: auto;
-		    -ms-hyphens: auto;
-		        hyphens: auto;
+		float: left;
+		line-height: 72px;
+		text-align: left;
+	}
+	.step__description > br {
+		display: none;
 	}
 }
